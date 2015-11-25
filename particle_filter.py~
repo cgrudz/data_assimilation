@@ -1,0 +1,29 @@
+from pylab import *
+from scipy.integrate import odeint
+
+def  bootstrap(model,intial,model_dim,cloud_size,weights,interval,obs,Q):
+
+    """This is a general bootstrap particle filter function
+    
+    The fields to supply are the derivative function `model', the initial cloud
+    'initial', the model dimension and cloud size,
+    the particle weights at initialization `weights', the interval 
+    to integrate the cloud '`interval', the observation with which to 
+    update the cloud at the end analysis time, and the inverse of the 
+    observational error covaraince `Q'.
+    
+    We assume that the model is vectorized to accept a cloud of initial
+    conditions of the shape [model_dimension, cloud_size]."""
+            
+    #We integrate the initial cloud to the analysis time
+    traj = odeint(model,initial,interval)
+    
+    #compute the likelyhood function
+    innov = obs - traj[-1,:].reshape([model_dim,cloud_size])
+    temp = sum(Q.dot(innov)*innov,axis=0)
+    likelyhood = exp(-0.5*temp)**(1.0/3.0)
+    
+    weights = weights*likelyhood
+    
+    return [traj,weights]
+    

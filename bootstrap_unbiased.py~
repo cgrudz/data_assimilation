@@ -1,0 +1,63 @@
+from pylab import *
+from scipy.integrate import odeint
+from no_resample_update import no_resample_update
+import ipdb
+
+def  bootstrap(model,state_dim,prior,ens_size,interval,nanl,tanl,obs,Q):
+
+    """This is the unbiased bootstrap particle filter function
+    
+    The fields to supply are the derivative function `model', the initial cloud
+    'initial', the model dimension and cloud size,
+    the particle weights at initialization `weights', the interval 
+    to integrate the cloud '`interval', the observation with which to 
+    update the cloud at the end analysis time, and the inverse of the 
+    observational error covaraince `Q'.
+    
+    We assume that the model is vectorized to accept a cloud of initial
+    conditions of the shape [model_dimension, cloud_size]."""
+    
+    # store the analysis times indices in the full integration interval
+    a_time = array(range(0,len(interval),tanl))
+
+    # storage dictionary for the trajectories and weights
+    p_series = {}
+    A = 'A_'
+    ipdb.set_trace()
+    # divergence safety check
+    divergence = False
+    
+    # define the initial weights
+    weights = (1.0/ens_size)*ones(ens_size)    
+
+    # loop through the analysis times starting at time zero
+    for i in range(nanl):
+        
+        # recompute the weights and load into the dict as a tuple
+        [analysis,weights,ens_size] = no_resample_update(weights,obs[i,:],Q,prior,ens_size,state_dim)
+        
+        # check for filter divergence
+        if ens_size < 10:
+            divergence = True
+            A_i = A + str(i)
+            p_series[A_i] = [prior,analysis,weights]
+            break
+        
+        # integrate the initial cloud to the next analysis time;
+        # note integration interval starts at time 0, and slice notation goes to the last index - 1
+        traj = odeint(model,analysis,interval[a_time[i]:a_time[i+1]+1])
+        
+        #create storage for next iteration
+        A_i = A + str(i)
+        p_series[A_i] = [prior, analysis, weights, traj]
+        
+        #initialize the next forecast
+        prior = traj[-1,:]
+        
+    # final analysis time weight update
+    if not divergence:
+        [analysis,weights,ens_size] = no_resample_update(weights,obs[i+1,:],Q,prior,ens_size,state_dim)
+        A_i = A + str(i+1)
+        p_series[A_i] = [prior, analysis, weights]
+    
+    return p_series

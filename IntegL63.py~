@@ -1,0 +1,25 @@
+from pylab import *
+
+def IntegL63(tstep,h,zval,yval,xval,a,r,b):
+        
+    x = zeros(tstep+1)
+    y = zeros(tstep+1)
+    z = zeros(tstep+1)
+    x[0] = xval
+    y[0] = yval
+    z[0] = zval
+    
+    for i in range(tstep):
+        kx1 = h*a*(y[i]-x[i])
+        ky1 = h*(r*x[i]-y[i]-x[i]*z[i])
+        kz1 = h*(x[i]*y[i]-b*z[i])
+
+        kx2 = h*a*(y[i]+ky1-x[i]-kx1)
+        ky2 = h*(r*(x[i]+kx1)-y[i]-ky1-(x[i]+kx1)*(z[i]+kz1))
+        kz2 = h*((x[i]+kx1)*(y[i]+ky1)-b*(z[i]+kz1))
+
+        x[i+1] = x[i] + 0.5*(kx1+kx2)
+        y[i+1] = y[i] + 0.5*(ky1+ky2)
+        z[i+1] = z[i] + 0.5*(kz1+kz2)
+        
+    return [x, y, z]
