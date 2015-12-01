@@ -1,3 +1,6 @@
+import numpy as np
+from pylab import find
+
 def no_resample_update(weights,obs,Q,cloud,ens_size,state_dim):
     
     """This performs the analysis step of the particle filter without resampling.
@@ -8,25 +11,25 @@ def no_resample_update(weights,obs,Q,cloud,ens_size,state_dim):
     normalization of the weights in the new enesemble."""
     
     # vectorize the innovation from the integration form
-    cloud = reshape(cloud,[ens_size,state_dim])
+    cloud = np.reshape(cloud,[ens_size,state_dim])
     innov = -1*(cloud- obs).transpose()
         
     # compute the exponent of the likelyhood function
-    temp  = sum(Q.dot(innov)*innov,axis=0)
-    l_hood = exp(-0.5*temp)**(1.0/3.0)
+    temp  = np.sum(Q.dot(innov)*innov,axis=0)
+    l_hood = np.exp(-0.5*temp)**(1.0/3.0)
         
     # update the weights
     weights = weights*l_hood
-    weights = weights/(sum(weights))
+    weights = weights/(np.sum(weights))
         
     # delete the ensemble members falling below a threshold weight and re-weight
     deleting_idx = weights < 1e-20
     deleting_idx = find(deleting_idx)
-    analysis = delete(cloud,deleting_idx,0)
+    analysis = np.delete(cloud,deleting_idx,0)
     ens_size = len(analysis[:,0])
-    analysis = reshape(analysis,analysis.size) 
+    analysis = np.reshape(analysis,analysis.size) 
         
-    weights = delete(weights,deleting_idx)
+    weights = np.delete(weights,deleting_idx)
     weights = weights/(sum(weights))
         
     return [analysis,weights,ens_size]

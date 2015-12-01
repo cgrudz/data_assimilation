@@ -1,4 +1,4 @@
-from pylab import *
+import numpy as np
 from scipy.integrate import odeint
 from no_resample_update import no_resample_update
 
@@ -17,7 +17,7 @@ def  bootstrap(model,state_dim,prior,ens_size,interval,nanl,tanl,obs,Q):
     conditions of the shape [model_dimension, cloud_size]."""
     
     # store the analysis times indices in the full integration interval
-    a_time = array(range(0,len(interval),tanl))
+    a_time = np.array(range(0,len(interval),tanl))
 
     # storage dictionary for the trajectories and weights
     p_series = {}
@@ -27,19 +27,24 @@ def  bootstrap(model,state_dim,prior,ens_size,interval,nanl,tanl,obs,Q):
     divergence = False
     
     # define the initial weights
-    weights = (1.0/ens_size)*ones(ens_size)    
+    weights = (1.0/ens_size)*np.ones(ens_size)    
 
     # loop through the analysis times starting at time zero
     for i in range(nanl):
-        
-        # recompute the weights and load into the dict as a tuple
-        [analysis,weights,ens_size] = no_resample_update(weights,obs[i,:],Q,prior,ens_size,state_dim)
-        
+
+        # store the prior weights and states
+	prior_W = weights        
+	prior_S = np.reshape(prior,[ens_size,state_dim])
+
+        # recompute the weights, and throw out neglible particles
+        [analysis,weights,ens_size] = no_resample_update(weights,obs[i,:],Q,prior,ens_size,state_dim)        
+	post_S = np.reshape(analysis,[ens_size,state_dim])
+
         # check for filter divergence
         if ens_size < 10:
             divergence = True
             A_i = A + str(i)
-            p_series[A_i] = [prior,analysis,weights]
+            p_series[A_i] = {'prior':prior_S,'prior_weight':prior_W,'post':post_S,'post_weight':weights}
             break
         
         # integrate the initial cloud to the next analysis time;
@@ -48,15 +53,18 @@ def  bootstrap(model,state_dim,prior,ens_size,interval,nanl,tanl,obs,Q):
         
         #create storage for next iteration
         A_i = A + str(i)
-        p_series[A_i] = [prior, analysis, weights, traj]
+        p_series[A_i] = {'prior':prior_S,'prior_weight':prior_W,'post':post_S,'post_weight':weights,'traj':traj}
         
         #initialize the next forecast
         prior = traj[-1,:]
         
-    # final analysis time weight update
+    # final analysis time weight update - no forward trajectory to store
     if not divergence:
+	prior_W = weights
+	prior_S = np.reshape(prior,[ens_size,state_dim])
         [analysis,weights,ens_size] = no_resample_update(weights,obs[i+1,:],Q,prior,ens_size,state_dim)
-        A_i = A + str(i+1)
-        p_series[A_i] = [prior, analysis, weights]
+	post_S = np.reshape(analysis,[ens_size,state_dim])        
+	A_i = A + str(i+1)
+        p_series[A_i] = {'prior':prior_S,'prior_weight':prior_W,'post':post_S,'post_weight':weights}
     
     return p_series

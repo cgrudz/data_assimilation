@@ -1,4 +1,4 @@
-from pylab import *
+import numpy as np
 
 def L63(state,t):
     
@@ -10,7 +10,7 @@ def L63(state,t):
     
     # Reshape the state vector to apply the derivative  
     particles = len(state)/3
-    state = reshape(state,[particles,3])
+    state = np.reshape(state,[particles,3])
     
     # unpack the state variables
     X = state[:,0]
@@ -21,7 +21,7 @@ def L63(state,t):
     dy = X*(rho - Z) - Y
     dz = X*Y - beta*Z
     
-    deriv = array([dx,dy,dz]).transpose()
-    deriv = reshape(deriv,particles*3)
+    deriv = np.array([dx,dy,dz]).transpose()
+    deriv = np.reshape(deriv,particles*3)
     
     return deriv

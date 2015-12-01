@@ -1,4 +1,4 @@
-from pylab import *
+import numpy as np
 from scipy.integrate import odeint
 
 def gauss_initialize(model,state_dim,particle_number,spin,dt,p_cov,obs_var):
@@ -9,12 +9,11 @@ def gauss_initialize(model,state_dim,particle_number,spin,dt,p_cov,obs_var):
     at a perturbation of the final state, and covariance given by p_cov.  This is returned along
     with the initial truth value for the dual experiment."""
     
-    init = ones(state_dim)
+    init = np.ones(state_dim)
     
     spun = odeint(model,init,spin)
     truth = spun[-1,:]
     
-    mean = truth + multivariate_normal(zeros(state_dim),eye(state_dim)*obs_var)
-    prior_cloud = multivariate_normal(truth,p_cov,[particle_number])
+    prior_cloud = np.random.multivariate_normal(truth,p_cov,[particle_number])
     
     return [truth,prior_cloud]

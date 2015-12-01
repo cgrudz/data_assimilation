@@ -1,4 +1,4 @@
-from pylab import *
+import numpy as np
 from scipy.integrate import odeint
 
 def gen_obs(model,truth,H,exp_int,nanl,tanl,obs_var):
@@ -12,15 +12,16 @@ def gen_obs(model,truth,H,exp_int,nanl,tanl,obs_var):
     of the the true trajectory."""
     
     # Define the model and obs dimensions
-    [obs_dim,state_dim] = shape(H)
+    [obs_dim,state_dim] = np.shape(H)
     exp_len = len(exp_int)
 
     # Propagate a `true' trajectory to generate the observations
     truth = odeint(model,truth,exp_int)
-    truth_traj = reshape(truth,[exp_len,state_dim])
+    truth_traj = np.reshape(truth,[exp_len,state_dim])
 
     # Create observations with error, with first observation at time zero, and ranging to
     # time exp_len, at intervals of tanl
-    obs = (H.dot(truth[::tanl,:].transpose())).transpose() + (randn(nanl+1,state_dim)*sqrt(obs_var))
+    Q = np.linalg.inv(eye(state_dim)*np.sqrt(obs_var))
+    obs = (H.dot(truth[::tanl,:].transpose())).transpose() + (np.random.randn(nanl+1,state_dim)*np.sqrt(obs_var))
     
-    return [truth_traj,obs]
+    return [truth_traj,obs,Q]
