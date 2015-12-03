@@ -12,7 +12,7 @@ def no_resample_update(weights,obs,Q,cloud,ens_size,state_dim):
     
     # vectorize the innovation from the integration form
     innov = -1*(cloud- obs).transpose()
-        
+    
     # compute the exponent of the likelyhood function
     temp  = np.sum(Q.dot(innov)*innov,axis=0)
     l_hood = np.exp(-0.5*temp)**(1.0/3.0)
@@ -26,7 +26,7 @@ def no_resample_update(weights,obs,Q,cloud,ens_size,state_dim):
     deleting_idx = find(deleting_idx)
     analysis = np.delete(cloud,deleting_idx,0)
     ens_size = len(analysis[:,0])
-        
+    
     weights = np.delete(weights,deleting_idx)
     weights = weights/(sum(weights))
         

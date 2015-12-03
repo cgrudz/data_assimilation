@@ -1,7 +1,7 @@
 import numpy as np
 from no_resample_update_discrete import no_resample_update
 
-def  bootstrap(model,state_dim,prior,ens_size,interval,nanl,tanl,obs,Q):
+def  bootstrap(model,state_dim,prior,ens_size,steps,nanl,tanl,obs,Q):
 
     """This is the unbiased bootstrap particle filter function
     
@@ -15,9 +15,6 @@ def  bootstrap(model,state_dim,prior,ens_size,interval,nanl,tanl,obs,Q):
     We assume that the model is vectorized to accept a cloud of initial
     conditions of the shape [model_dimension, cloud_size]."""
     
-    # store the analysis times indices in the full integration interval
-    a_time = np.array(range(0,len(interval),tanl))
-
     # storage dictionary for the trajectories and weights
     p_series = {}
     A = 'A_'
@@ -47,14 +44,14 @@ def  bootstrap(model,state_dim,prior,ens_size,interval,nanl,tanl,obs,Q):
             break
         
         # map the cloud to the next analysis time;
-        traj = model(analysis,steps)
+        traj = model(analysis,steps,ens_size)
         
         #create storage for next iteration
         A_i = A + str(i)
         p_series[A_i] = {'prior':prior_S,'prior_weight':prior_W,'post':post_S,'post_weight':weights,'traj':traj}
         
         #initialize the next forecast
-        prior = traj[-1,:]
+        prior = traj[:,-1,:]
         
     # final analysis time weight update - no forward trajectory to store
     if not divergence:
