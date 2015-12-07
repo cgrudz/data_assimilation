@@ -1,6 +1,6 @@
 import numpy as np
 from pylab import find
-import pdb
+
 def no_resample_update(weights,obs,Q,cloud,ens_size,state_dim):
     
     """This performs the analysis step of the particle filter without resampling.
@@ -27,7 +27,6 @@ def no_resample_update(weights,obs,Q,cloud,ens_size,state_dim):
     analysis = np.delete(cloud,deleting_idx,0)
     ens_size = len(analysis[:,0])
     
-    pdb.set_trace()
     weights = np.delete(weights,deleting_idx)
     weights = weights/(sum(weights))
         
