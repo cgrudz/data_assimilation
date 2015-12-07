@@ -1,7 +1,7 @@
 import numpy as np
 from no_resample_update_discrete import no_resample_update
 
-def  bootstrap(model,state_dim,prior,ens_size,steps,nanl,tanl,obs,Q):
+def  bootstrap(model,state_dim,prior,ens_size,thresh,steps,nanl,tanl,obs,Q):
 
     """This is the unbiased bootstrap particle filter function
     
@@ -33,7 +33,7 @@ def  bootstrap(model,state_dim,prior,ens_size,steps,nanl,tanl,obs,Q):
 	prior_S = prior
 
         # recompute the weights, and throw out neglible particles
-        [analysis,weights,ens_size] = no_resample_update(weights,obs[i,:],Q,prior,ens_size,state_dim)        
+        [analysis,weights,ens_size] = no_resample_update(weights,thresh,obs[i,:],Q,prior,ens_size,state_dim)        
 	post_S = analysis
 
         # check for filter divergence
@@ -57,7 +57,7 @@ def  bootstrap(model,state_dim,prior,ens_size,steps,nanl,tanl,obs,Q):
     if not divergence:
 	prior_W = weights
 	prior_S = prior
-        [analysis,weights,ens_size] = no_resample_update(weights,obs[i+1,:],Q,prior,ens_size,state_dim)
+        [analysis,weights,ens_size] = no_resample_update(weights,thresh,obs[i+1,:],Q,prior,ens_size,state_dim)
 	post_S = analysis        
 	A_i = A + str(i+1)
         p_series[A_i] = {'prior':prior_S,'prior_weight':prior_W,'post':post_S,'post_weight':weights}

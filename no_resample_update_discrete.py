@@ -1,7 +1,7 @@
 import numpy as np
 from pylab import find
 
-def no_resample_update(weights,obs,Q,cloud,ens_size,state_dim):
+def no_resample_update(weights,thresh,obs,Q,cloud,ens_size,state_dim):
     
     """This performs the analysis step of the particle filter without resampling.
     
@@ -22,7 +22,7 @@ def no_resample_update(weights,obs,Q,cloud,ens_size,state_dim):
     weights = weights/(np.sum(weights))
         
     # delete the ensemble members falling below a threshold weight and re-weight
-    deleting_idx = weights < 1e-10
+    deleting_idx = weights < thresh
     deleting_idx = find(deleting_idx)
     analysis = np.delete(cloud,deleting_idx,0)
     ens_size = len(analysis[:,0])
