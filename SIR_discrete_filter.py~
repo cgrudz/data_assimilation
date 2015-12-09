@@ -1,0 +1,61 @@
+import numpy as np
+from SIR_update_discrete import SIR_update
+
+def  SIR_filter(model,prior,state_dim,ens_size,nanl,tanl,obs,Q,threshold,tuning):
+
+    """This is the bootstrap particle filter function
+    
+    The fields to supply are the derivative function `model', the resampler 
+    function, the initial cloud 'prior', the model dimension and cloud size,
+    the particle weights at initialization `weights', the number of analyses 
+    'nanl', the number of steps to propagate between observations 'tanl',
+    the observations with which to the observations with which to 
+    and the inverse of the observational error covaraince `Q', and threshold
+    which gives the threshold for the 'number of effective particles' count to
+    trigger the resampler.
+    """
+    
+    # storage dictionary for the trajectories and weights
+    p_series = {}
+    A = 'A_'
+
+    # define the initial weights
+    weights = (1.0/ens_size)*np.ones(ens_size)    
+    resample_count = 0
+
+    # loop through the analysis times starting at time zero
+    for i in range(nanl):
+
+        # store the prior weights and states
+	prior_W = weights        
+	prior_S = prior
+        prior_resample = resample_count
+
+        # recompute the weights
+        [analysis,weights,resample_count] = SIR_update(weights,threshold,tuning,resample_count,
+                                                       obs[i,:],Q,prior,ens_size,state_dim)        
+	post_S = analysis
+
+        # map the cloud to the next analysis time;
+        traj = model(analysis,tanl,ens_size)
+        
+        #create storage for next iteration
+        A_i = A + str(i)
+        p_series[A_i] = {'prior':prior_S,'prior_weight':prior_W,
+                         'post':post_S,'post_weight':weights,'traj':traj,
+                         'prior_resample':prior_resample, 'post_resample':resample_count}
+        
+        #initialize the next forecast
+        prior = traj[:,-1,:]
+        
+    # final analysis time weight update - no forward trajectory to store
+    prior_W = weights
+    prior_S = prior
+    [analysis,weights,ens_size] = SIR_update(weights,threshold,tuning,resample_count,
+                                             obs[i,:],Q,prior,ens_size,state_dim)
+    post_S = analysis        
+    A_i = A + str(i+1)
+    p_series[A_i] = {'prior':prior_S,'prior_weight':prior_W,
+                     'post':post_S,'post_weight':weights, 'resample':resample_count}
+    
+    return p_series
