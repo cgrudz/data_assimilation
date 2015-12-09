@@ -33,7 +33,7 @@ def  NRS_filter(model,prior,state_dim,ens_size,nanl,tanl,obs,Q,threshold):
 	prior_S = prior
 
         # recompute the weights, and throw out neglible particles
-        [analysis,weights,ens_size] = no_resample_update(weights,thresh,obs[i,:],Q,prior,ens_size,state_dim)        
+        [analysis,weights,ens_size] = no_resample_update(weights,threshold,obs[i,:],Q,prior,ens_size,state_dim)        
 	post_S = analysis
 
         # check for filter divergence
@@ -57,7 +57,7 @@ def  NRS_filter(model,prior,state_dim,ens_size,nanl,tanl,obs,Q,threshold):
     if not divergence:
 	prior_W = weights
 	prior_S = prior
-        [analysis,weights,ens_size] = no_resample_update(weights,thresh,obs[i+1,:],Q,prior,ens_size,state_dim)
+        [analysis,weights,ens_size] = no_resample_update(weights,threshold,obs[i+1,:],Q,prior,ens_size,state_dim)
 	post_S = analysis        
 	A_i = A + str(i+1)
         p_series[A_i] = {'prior':prior_S,'prior_weight':prior_W,'post':post_S,'post_weight':weights}

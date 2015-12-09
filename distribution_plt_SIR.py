@@ -23,7 +23,7 @@ def distribution_plt_SIR(pdf_series,obs,directory,exp_num):
         plt.scatter(cloud[:,0],cloud[:,1],c=weights)
         plt.plot(obs[i,0],obs[i,1],'rs')
         plt.plot(mean[0],mean[1],'ys')
-        plt.axis([-1,2,-2,2])
+        plt.axis([-.3,1.8,-1.8,1])
         plt.savefig(directory+key+'a.png')
         plt.close(temp)
     
@@ -38,6 +38,6 @@ def distribution_plt_SIR(pdf_series,obs,directory,exp_num):
         plt.scatter(cloud[:,0],cloud[:,1],c=weights)
         plt.plot(obs[i,0],obs[i,1],'rs')
         plt.plot(mean[0],mean[1],'ys')
-        plt.axis([-1,2,-2,2])
+        plt.axis([-.3,1.8,-1.8,1])
         plt.savefig(directory+key+'b.png')
         plt.close(temp)
