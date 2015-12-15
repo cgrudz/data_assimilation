@@ -20,7 +20,8 @@ def gen_obs(model,truth,H,exp_len,nanl,tanl,obs_var):
 
     # Create observations with error, with first observation at time zero, and ranging to
     # time exp_len, at intervals of tanl
-    Q = np.linalg.inv(np.eye(state_dim)*np.sqrt(obs_var))
+    R = np.eye(state_dim)*np.sqrt(obs_var)
+    Q = np.linalg.inv(R)
     obs = (H.dot(truth[::tanl,:].transpose())).transpose() + (np.random.randn(nanl+1,state_dim)*np.sqrt(obs_var))
     
-    return [truth,obs,Q]
+    return [truth,obs,Q,R]
