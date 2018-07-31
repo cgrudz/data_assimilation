@@ -1,0 +1,40 @@
+2017-03-29 12:33:52.460 [IPClusterStart] Removing pid file: /home/plinx/.ipython/profile_default/pid/ipcluster.pid
+2017-03-29 12:33:52.460 [IPClusterStart] Starting ipcluster with [daemon=False]
+2017-03-29 12:33:52.461 [IPClusterStart] Creating pid file: /home/plinx/.ipython/profile_default/pid/ipcluster.pid
+2017-03-29 12:33:52.462 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2017-03-29 12:33:53.466 [IPClusterStart] Starting 4 Engines with LocalEngineSetLauncher
+2017-03-29 12:34:23.796 [IPClusterStart] Engines appear to have started successfully
+2017-03-30 12:51:51.712 [IPClusterStart] CRITICAL | Cluster is already running with [pid=22996]. use "ipcluster stop" to stop the cluster.
+2017-03-30 12:52:37.401 [IPClusterStart] ERROR | IPython cluster: stopping
+2017-03-30 12:52:37.401 [IPClusterStart] Stopping Engines...
+2017-03-30 12:52:40.402 [IPClusterStart] Removing pid file: /home/plinx/.ipython/profile_default/pid/ipcluster.pid
+2017-03-30 12:54:11.901 [IPClusterStart] Starting ipcluster with [daemon=False]
+2017-03-30 12:54:11.902 [IPClusterStart] Creating pid file: /home/plinx/.ipython/profile_default/pid/ipcluster.pid
+2017-03-30 12:54:11.902 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2017-03-30 12:54:12.907 [IPClusterStart] Starting 2 Engines with LocalEngineSetLauncher
+2017-03-30 12:54:43.020 [IPClusterStart] Engines appear to have started successfully
+importing experiment from kf_obs_max_p_exp on engine(s)
+[[0, 8], [1, 8]]
+2017-04-03 10:17:43.137 [IPClusterStart] Removing pid file: /home/plinx/.ipython/profile_default/pid/ipcluster.pid
+2017-04-03 10:17:43.152 [IPClusterStart] Starting ipcluster with [daemon=False]
+2017-04-03 10:17:43.154 [IPClusterStart] Creating pid file: /home/plinx/.ipython/profile_default/pid/ipcluster.pid
+2017-04-03 10:17:43.154 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2017-04-03 10:17:44.160 [IPClusterStart] Starting 4 Engines with LocalEngineSetLauncher
+2017-04-03 10:18:14.488 [IPClusterStart] Engines appear to have started successfully
+importing experiment from kf_obs_max_p_exp on engine(s)
+Traceback (most recent call last):
+  File "parallel_run.py", line 27, in <module>
+    for j in range(err):
+TypeError: 'list' object cannot be interpreted as an integer
+importing experiment from kf_obs_max_p_exp on engine(s)
+[[0, 8, 0], [1, 8, 0], [0, 8, 1], [1, 8, 1]]
+  File "ekf_v_ause_v_aus_sde.py", line 89
+    experiment([10, .25, './data/sde_seed_000_sys_dim_10_analint_0.1_diffusion_001.txt'])
+                                                                                        ^
+IndentationError: unindent does not match any outer indentation level
+Traceback (most recent call last):
+  File "ekf_v_ause_v_aus_sde.py", line 89, in <module>
+    experiment([10, .25, './data/sde_seed_000_sys_dim_10_analint_0.1_diffusion_001.txt'])
+  File "ekf_v_ause_v_aus_sde.py", line 26, in experiment
+    fid = open(fname, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: './data/sde_seed_000_sys_dim_10_analint_0.1_diffusion_001.txt'

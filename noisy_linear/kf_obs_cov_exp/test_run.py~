@@ -1,0 +1,8 @@
+# This is a test script for the hypothesis on the transient growth rates
+from cum_norm_experiment import experiment 
+
+completed = experiment(2000,8.0)
+
+print(completed)
+
+########################################################################################################################

@@ -1,0 +1,329 @@
+2016-11-30 16:05:40.789 [IPClusterStart] Starting ipcluster with [daemon=False]
+2016-11-30 16:05:40.790 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 16:05:40.790 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2016-11-30 16:05:41.793 [IPClusterStart] Starting 10 Engines with LocalEngineSetLauncher
+2016-11-30 16:06:12.740 [IPClusterStart] Engines appear to have started successfully
+2016-11-30 16:12:21.446 [IPClusterStart] ERROR | IPython cluster: stopping
+2016-11-30 16:12:21.446 [IPClusterStart] Stopping Engines...
+2016-11-30 16:12:24.450 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 16:14:46.650 [IPClusterStart] Starting ipcluster with [daemon=False]
+2016-11-30 16:14:46.651 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 16:14:46.652 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2016-11-30 16:14:47.655 [IPClusterStart] Starting 10 Engines with LocalEngineSetLauncher
+2016-11-30 16:15:18.602 [IPClusterStart] Engines appear to have started successfully
+2016-11-30 18:08:44.207 [IPClusterStart] ERROR | IPython cluster: stopping
+2016-11-30 18:08:44.208 [IPClusterStart] Stopping Engines...
+2016-11-30 18:08:47.210 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 18:19:45.859 [IPClusterStart] Starting ipcluster with [daemon=False]
+2016-11-30 18:19:45.860 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 18:19:45.861 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2016-11-30 18:19:46.864 [IPClusterStart] Starting 10 Engines with LocalEngineSetLauncher
+2016-11-30 18:20:17.814 [IPClusterStart] Engines appear to have started successfully
+2016-11-30 18:34:35.031 [IPClusterStart] ERROR | IPython cluster: stopping
+2016-11-30 18:34:35.031 [IPClusterStart] Stopping Engines...
+2016-11-30 18:34:38.034 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 18:39:20.377 [IPClusterStart] Starting ipcluster with [daemon=False]
+2016-11-30 18:39:20.378 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 18:39:20.379 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2016-11-30 18:39:21.382 [IPClusterStart] Starting 10 Engines with LocalEngineSetLauncher
+2016-11-30 18:39:52.327 [IPClusterStart] Engines appear to have started successfully
+2016-11-30 20:56:31.990 [IPClusterStart] ERROR | IPython cluster: stopping
+2016-11-30 20:56:31.991 [IPClusterStart] Stopping Engines...
+2016-11-30 20:56:34.995 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 21:02:41.824 [IPClusterStart] Starting ipcluster with [daemon=False]
+2016-11-30 21:02:41.825 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 21:02:41.826 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2016-11-30 21:02:42.829 [IPClusterStart] Starting 10 Engines with LocalEngineSetLauncher
+2016-11-30 21:03:11.047 [IPClusterStart] ERROR | IPython cluster: stopping
+2016-11-30 21:03:11.047 [IPClusterStart] Stopping Engines...
+2016-11-30 21:03:13.775 [IPClusterStart] Engines appear to have started successfully
+2016-11-30 21:03:14.048 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 21:05:20.968 [IPClusterStart] Starting ipcluster with [daemon=False]
+2016-11-30 21:05:20.969 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-11-30 21:05:20.983 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2016-11-30 21:05:21.986 [IPClusterStart] Starting 10 Engines with LocalEngineSetLauncher
+2016-11-30 21:05:52.930 [IPClusterStart] Engines appear to have started successfully
+2016-11-30 23:10:19.109 [IPClusterStart] ERROR | IPython cluster: stopping
+2016-11-30 23:10:19.109 [IPClusterStart] Stopping Engines...
+2016-11-30 23:10:22.113 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-12-13 14:09:23.799 [IPClusterStart] Starting ipcluster with [daemon=False]
+2016-12-13 14:09:23.800 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-12-13 14:09:23.801 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2016-12-13 14:09:24.804 [IPClusterStart] Starting 2 Engines with LocalEngineSetLauncher
+2016-12-13 14:09:54.913 [IPClusterStart] Engines appear to have started successfully
+2016-12-13 15:30:23.308 [IPClusterStart] ERROR | IPython cluster: stopping
+2016-12-13 15:30:23.309 [IPClusterStart] Stopping Engines...
+2016-12-13 15:30:26.312 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-12-13 15:30:48.733 [IPClusterStart] Starting ipcluster with [daemon=False]
+2016-12-13 15:30:48.734 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-12-13 15:30:48.735 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2016-12-13 15:30:49.738 [IPClusterStart] Starting 8 Engines with LocalEngineSetLauncher
+2016-12-13 15:31:20.476 [IPClusterStart] Engines appear to have started successfully
+2016-12-13 17:11:42.385 [IPClusterStart] ERROR | IPython cluster: stopping
+2016-12-13 17:11:42.385 [IPClusterStart] Stopping Engines...
+2016-12-13 17:11:45.388 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-12-13 17:13:41.290 [IPClusterStart] Starting ipcluster with [daemon=False]
+2016-12-13 17:13:41.291 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2016-12-13 17:13:41.300 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2016-12-13 17:13:42.304 [IPClusterStart] Starting 10 Engines with LocalEngineSetLauncher
+2016-12-13 17:14:13.253 [IPClusterStart] Engines appear to have started successfully
+2016-12-20 11:14:55.235 [IPClusterStart] ERROR | IPython cluster: stopping
+2016-12-20 11:14:55.235 [IPClusterStart] Stopping Engines...
+2016-12-20 11:14:58.242 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2017-02-24 12:16:46.038 [IPClusterStart] Starting ipcluster with [daemon=False]
+2017-02-24 12:16:46.040 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2017-02-24 12:16:46.041 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2017-02-24 12:16:47.053 [IPClusterStart] Starting 5 Engines with LocalEngineSetLauncher
+2017-02-24 12:17:17.538 [IPClusterStart] Engines appear to have started successfully
+importing experiment from cum_norm_experiment on engine(s)
+[2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000]
+2017-02-27 14:26:37.464 [IPClusterStart] ERROR | IPython cluster: stopping
+2017-02-27 14:26:37.473 [IPClusterStart] Stopping Engines...
+2017-02-27 14:26:40.495 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+[IPClusterApp] CRITICAL | Bad config encountered during initialization:
+[IPClusterApp] CRITICAL | Unrecognized flag: '-n'
+Start an IPython cluster for parallel computing.
+
+An IPython cluster consists of 1 controller and 1 or more engines. This command
+automates the startup of these processes using a wide range of startup methods
+(SSH, local processes, PBS, mpiexec, SGE, LSF, HTCondor, Slurm, Windows HPC
+Server 2008). To start a cluster with 4 engines on your local host simply do
+'ipcluster start --n=4'. For more complex usage you will typically do 'ipython
+profile create mycluster --parallel', then edit configuration files, followed by
+'ipcluster start --profile=mycluster --n=4'.
+
+Subcommands
+-----------
+
+Subcommands are launched as `ipcluster cmd [args]`. For information on using
+subcommand 'cmd', do: `ipcluster cmd -h`.
+
+start
+    Start an IPython cluster for parallel computing
+    
+    Start an ipython cluster by its profile name or cluster
+    directory. Cluster directories contain configuration, log and
+    security related files and are named using the convention
+    'profile_<name>' and should be creating using the 'start'
+    subcommand of 'ipcluster'. If your cluster directory is in
+    the cwd or the ipython directory, you can simply refer to it
+    using its profile name, 'ipcluster start --n=4 --profile=<profile>`,
+    otherwise use the 'profile-dir' option.
+engines
+    Start engines connected to an existing IPython cluster
+    
+    Start one or more engines to connect to an existing Cluster
+    by profile name or cluster directory.
+    Cluster directories contain configuration, log and
+    security related files and are named using the convention
+    'profile_<name>' and should be creating using the 'start'
+    subcommand of 'ipcluster'. If your cluster directory is in
+    the cwd or the ipython directory, you can simply refer to it
+    using its profile name, 'ipcluster engines --n=4 --profile=<profile>`,
+    otherwise use the 'profile-dir' option.
+stop
+    Stop a running IPython cluster
+    
+    Stop a running ipython cluster by its profile name or cluster
+    directory. Cluster directories are named using the convention
+    'profile_<name>'. If your cluster directory is in
+    the cwd or the ipython directory, you can simply refer to it
+    using its profile name, 'ipcluster stop --profile=<profile>`, otherwise
+    use the '--profile-dir' option.
+nbextension
+    Enable/disable IPython clusters tab in Jupyter notebook
+    
+    for Jupyter Notebook >= 4.2, you can use the new nbextension API:
+    
+    jupyter serverextension enable --py ipyparallel
+    jupyter nbextension install --py ipyparallel
+    jupyter nbextension enable --py ipyparallel
+
+To see all available configurables, use `--help-all`
+
+Examples
+--------
+
+    ipcluster start --n=4 # start a 4 node cluster on localhost
+    ipcluster start -h    # show the help string for the start subcmd
+    
+    ipcluster stop -h     # show the help string for the stop subcmd
+    ipcluster engines -h  # show the help string for the engines subcmd
+
+2017-03-02 14:27:42.912 [IPClusterStart] Starting ipcluster with [daemon=False]
+2017-03-02 14:27:42.914 [IPClusterStart] Creating pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2017-03-02 14:27:42.915 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2017-03-02 14:27:43.925 [IPClusterStart] Starting 5 Engines with LocalEngineSetLauncher
+2017-03-02 14:28:14.425 [IPClusterStart] Engines appear to have started successfully
+importing experiment from cum_norm_experiment on engine(s)
+[2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000]
+2017-03-06 10:02:28.391 [IPClusterStart] ERROR | IPython cluster: stopping
+2017-03-06 10:02:28.392 [IPClusterStart] Stopping Engines...
+2017-03-06 10:02:31.396 [IPClusterStart] Removing pid file: /mnt/10.11.12.231/Home/coludz/.ipython/profile_default/pid/ipcluster.pid
+2017-03-26 15:42:44.175 [IPClusterStart] Starting ipcluster with [daemon=False]
+2017-03-26 15:42:44.194 [IPClusterStart] Creating pid file: /home/plinx/.ipython/profile_default/pid/ipcluster.pid
+2017-03-26 15:42:44.195 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2017-03-26 15:42:45.199 [IPClusterStart] Starting 2 Engines with LocalEngineSetLauncher
+2017-03-26 15:43:15.315 [IPClusterStart] Engines appear to have started successfully
+2018-07-03 10:28:54.070 [IPClusterStart] CRITICAL | Bad config encountered during initialization:
+2018-07-03 10:28:54.071 [IPClusterStart] CRITICAL | Unrecognized flag: '-6'
+Start an IPython cluster for parallel computing
+
+Start an ipython cluster by its profile name or cluster directory. Cluster
+directories contain configuration, log and security related files and are named
+using the convention 'profile_<name>' and should be creating using the 'start'
+subcommand of 'ipcluster'. If your cluster directory is in the cwd or the
+ipython directory, you can simply refer to it using its profile name, 'ipcluster
+start --n=4 --profile=<profile>`, otherwise use the 'profile-dir' option.
+
+Options
+-------
+
+Arguments that take values are actually convenience aliases to full
+Configurables, whose aliases are listed on the help line. For more information
+on full configurables, see '--help-all'.
+
+--log-to-file
+    send log output to a file
+--debug
+    set log level to logging.DEBUG (maximize logging output)
+--quiet
+    set log level to logging.CRITICAL (minimize logging output)
+--init
+    Initialize profile with default config files.  This is equivalent
+    to running `ipython profile create <profile>` prior to startup.
+--daemonize
+    run the cluster into the background (not available on Windows)
+--profile-dir=<Unicode> (ProfileDir.location)
+    Default: ''
+    Set the profile location directly. This overrides the logic used by the
+    `profile` option.
+--profile=<Unicode> (BaseIPythonApplication.profile)
+    Default: 'default'
+    The IPython profile to use.
+--ipython-dir=<Unicode> (BaseIPythonApplication.ipython_dir)
+    Default: ''
+    The name of the IPython directory. This directory is used for logging
+    configuration (through profiles), history storage, etc. The default is
+    usually $HOME/.ipython. This option can also be specified through the
+    environment variable IPYTHONDIR.
+--log-level=<Enum> (Application.log_level)
+    Default: 30
+    Choices: (0, 10, 20, 30, 40, 50, 'DEBUG', 'INFO', 'WARN', 'ERROR', 'CRITICAL')
+    Set the log level by value or name.
+--config=<Unicode> (BaseIPythonApplication.extra_config_file)
+    Default: ''
+    Path to an extra config file to load.
+    If specified, load this config file in addition to any other IPython config.
+--work-dir=<Unicode> (BaseParallelApplication.work_dir)
+    Default: '/home/Processor/kf_obs_cov_exp'
+    Set the working dir for the process.
+--log-to-file=<Bool> (BaseParallelApplication.log_to_file)
+    Default: False
+    whether to log to a file
+--clean-logs=<Bool> (IPClusterStart.clean_logs)
+    Default: True
+    whether to cleanup old logs before starting
+--log-url=<Unicode> (BaseParallelApplication.log_url)
+    Default: ''
+    The ZMQ URL of the iplogger to aggregate logging.
+--cluster-id=<Unicode> (BaseParallelApplication.cluster_id)
+    Default: ''
+    String id to add to runtime files, to prevent name collisions when using
+    multiple clusters with a single profile simultaneously.
+    When set, files will be named like: 'ipcontroller-<cluster_id>-engine.json'
+    Since this is text inserted into filenames, typical recommendations apply:
+    Simple character strings are ideal, and spaces are not recommended (but
+    should generally work).
+-n <Int> (IPClusterEngines.n)
+    Default: 16
+    The number of engines to start. The default is to use one for each CPU on
+    your machine
+--engines=<DottedObjectName> (IPClusterEngines.engine_launcher_class)
+    Default: 'LocalEngineSetLauncher'
+    The class for launching a set of Engines. Change this value to use various
+    batch systems to launch your engines, such as PBS,SGE,MPI,etc. Each launcher
+    class has its own set of configuration options, for making sure it will work
+    in your environment.
+    You can also write your own launcher, and specify it's absolute import path,
+    as in 'mymodule.launcher.FTLEnginesLauncher`.
+    IPython's bundled examples include:
+        Local : start engines locally as subprocesses [default]
+        MPI : use mpiexec to launch engines in an MPI environment
+        PBS : use PBS (qsub) to submit engines to a batch queue
+        SGE : use SGE (qsub) to submit engines to a batch queue
+        LSF : use LSF (bsub) to submit engines to a batch queue
+        SSH : use SSH to start the controller
+                    Note that SSH does *not* move the connection files
+                    around, so you will likely have to do this manually
+                    unless the machines are on a shared file system.
+        HTCondor : use HTCondor to submit engines to a batch queue
+        Slurm : use Slurm to submit engines to a batch queue
+        WindowsHPC : use Windows HPC
+    If you are using one of IPython's builtin launchers, you can specify just
+    the prefix, e.g:
+        c.IPClusterEngines.engine_launcher_class = 'SSH'
+    or:
+        ipcluster start --engines=MPI
+--daemonize=<Bool> (IPClusterEngines.daemonize)
+    Default: False
+    Daemonize the ipcluster program. This implies --log-to-file. Not available
+    on Windows.
+--delay=<CFloat> (IPClusterStart.delay)
+    Default: 1.0
+    delay (in s) between starting the controller and the engines
+--controller=<DottedObjectName> (IPClusterStart.controller_launcher_class)
+    Default: 'LocalControllerLauncher'
+    The class for launching a Controller. Change this value if you want your
+    controller to also be launched by a batch system, such as PBS,SGE,MPI,etc.
+    Each launcher class has its own set of configuration options, for making
+    sure it will work in your environment.
+    Note that using a batch launcher for the controller *does not* put it in the
+    same batch job as the engines, so they will still start separately.
+    IPython's bundled examples include:
+        Local : start engines locally as subprocesses
+        MPI : use mpiexec to launch the controller in an MPI universe
+        PBS : use PBS (qsub) to submit the controller to a batch queue
+        SGE : use SGE (qsub) to submit the controller to a batch queue
+        LSF : use LSF (bsub) to submit the controller to a batch queue
+        HTCondor : use HTCondor to submit the controller to a batch queue
+        Slurm : use Slurm to submit engines to a batch queue
+        SSH : use SSH to start the controller
+        WindowsHPC : use Windows HPC
+    If you are using one of IPython's builtin launchers, you can specify just
+    the prefix, e.g:
+        c.IPClusterStart.controller_launcher_class = 'SSH'
+    or:
+        ipcluster start --controller=MPI
+--ip=<Unicode> (IPClusterStart.controller_ip)
+    Default: ''
+    Set the IP address of the controller.
+--location=<Unicode> (IPClusterStart.controller_location)
+    Default: ''
+    Set the location (hostname or ip) of the controller.
+    This is used by engines and clients to locate the controller when the
+    controller listens on all interfaces
+
+To see all available configurables, use `--help-all`
+
+Examples
+--------
+
+    ipython profile create mycluster --parallel # create mycluster profile
+    ipcluster start --profile=mycluster --n=4   # start mycluster with 4 nodes
+    
+    # args to `ipcluster start` after `--` are passed through to the controller
+    # see `ipcontroller -h` for options
+    ipcluster start -- --sqlitedb
+
+2018-07-03 10:29:22.876 [IPClusterStart] Starting ipcluster with [daemon=False]
+2018-07-03 10:29:22.877 [IPClusterStart] Creating pid file: /home/Processor/.ipython/profile_default/pid/ipcluster.pid
+2018-07-03 10:29:22.877 [IPClusterStart] Starting Controller with LocalControllerLauncher
+2018-07-03 10:29:23.882 [IPClusterStart] Starting 6 Engines with LocalEngineSetLauncher
+2018-07-03 10:29:54.435 [IPClusterStart] Engines appear to have started successfully
+importing experiment from kf_obs_cov_eigs_exp on engine(s)
+[[0, 0.1, 1, 1, 4], [0, 0.1, 1, 1, 5], [0, 0.1, 1, 1, 6], [0, 0.1, 1, 1, 7], [0, 0.1, 1, 1, 8], [0, 0.1, 1, 1, 9], [0, 0.1, 1, 1, 10]]
+importing experiment from kf_obs_cov_eigs_exp on engine(s)
+[[0, 0.1, 1, 1, 4], [0, 0.1, 1, 1, 5], [0, 0.1, 1, 1, 6], [0, 0.1, 1, 1, 7], [0, 0.1, 1, 1, 8], [0, 0.1, 1, 1, 9], [0, 0.1, 1, 1, 10]]
+importing experiment from kf_obs_cov_eigs_exp on engine(s)
+[[0, 0.1, 1, 1, 4], [0, 0.1, 1, 1, 5], [0, 0.1, 1, 1, 6], [0, 0.1, 1, 1, 7], [0, 0.1, 1, 1, 8], [0, 0.1, 1, 1, 9], [0, 0.1, 1, 1, 10]]
