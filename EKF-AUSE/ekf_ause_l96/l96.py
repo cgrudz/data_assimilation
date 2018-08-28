@@ -131,6 +131,7 @@ def l96_2tay_sde(x, h, f, diffusion, p, rho=False, alpha=False):
     # we draw standard normal samples for all subsequent steps
     rndm = np.random.standard_normal([sys_dim, 2*p + 4])
 
+    # NOTE: THIS NEEDS TO BE FIXED DUE TO THE FUNCTIONAL RELATIONSHIP BETWEEN W AND XI
     # we transform from the standard normal to the normal with variance given by the length of the time step
     W = rndm[:, 0] * np.sqrt(h)
 
@@ -197,6 +198,7 @@ def l96_2tay_sde(x, h, f, diffusion, p, rho=False, alpha=False):
     psi_plus = np.array([Psi((i-1) % sys_dim, (i+1) % sys_dim) for i in range(sys_dim)])
     psi_minus = np.array([Psi((i-2) % sys_dim, (i-1) % sys_dim) for i in range(sys_dim)])
 
+    # CHECK ALL SIGNS IN THIS CODE LINE
     # the final vectorized step forward is given as
     x_step = x + dx * h + diffusion * W + 0.5 * Jac_x @ dx * h**2 + \
              h * diffusion * Jac_x @ V + diffusion**2 * (psi_plus - psi_minus)

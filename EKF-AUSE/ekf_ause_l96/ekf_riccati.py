@@ -20,8 +20,8 @@ def ekf_fore(M, P, Q, R, H, I, inflation=1.0):
     Omega = H.T @ np.linalg.inv(R) @ H
     XOX = X.T @ Omega @ X
 
-    P = M @ X @ np.linalg.inv(I + XOX) @ X.T @ M.T + Q
-    P = P * inflation
+    P = M @ X @ np.linalg.inv(I + XOX) @ X.T @ M.T 
+    P = P * inflation + Q
 
     return P
 

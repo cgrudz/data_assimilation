@@ -127,8 +127,8 @@ def EKFAUS_fore(P_0, B_0, T_1, H_0, Q_ff, R, inflation=1.0):
     # UPDATE STEPS
 
     # filtered block update
-    S_1sqr = T_1 @ S_0 @ np.linalg.inv(I_f + Omega) @ S_0 @ T_1.T + Q_ff
-    S_1sqr = S_1sqr * inflation
+    S_1sqr = T_1 @ S_0 @ np.linalg.inv(I_f + Omega) @ S_0 @ T_1.T 
+    S_1sqr = S_1sqr * inflation + Q_ff
 
     return S_1sqr
 
@@ -315,7 +315,7 @@ def KFAUSE_fore(P_0, B_0, T_1, H_0, ens_dim, Q_1, R, inflation=1.0):
 
 def simulate_ekf_aus_jump(x_0, truth, ens_dim, obs_dim, h, f, tanl, tl_fore_steps, Q, obs_un, seed, burn, m_inf=1.0,
                           a_inf=0.0, clim=[0]):
-    """This function simulates the extended kalman AUS filter with alternating obs operator"""
+    """This function simulates the extended kalman AUS filter"""
 
     # define initial parameters
     [sys_dim, nanl] = np.shape(truth)

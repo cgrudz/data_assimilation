@@ -30,7 +30,7 @@ def experiment(args):
     f = 8
 
     # number of analyses
-    nanl = 12
+    nanl = 110000
 
     # tlm integration step size (nonlinear step size is half)
     h = .01
@@ -41,10 +41,10 @@ def experiment(args):
     nl_fore_steps = int(tanl / nl_step)
 
     # continous time of the spin period
-    spin = 50
+    spin = 5000
 
     # burn in period for the da routine
-    burn = 2
+    burn = 10000
 
     # define the initial/ model error covariance
     Q = circulant([1, .5, .25] + [0]*(sys_dim - 5) + [.25, .5])
@@ -93,20 +93,20 @@ def experiment(args):
     ####################################################################################################################
 
     m_infl_range = np.linspace(0, 3, 31)
-    a_infl_range = np.linspace(0, .5, 11)
-    for i in range(2):
+    #a_infl_range = np.linspace(0, .5, 11)
+    for i in range(31):
         # we reinitialize a storage dictionary, to store at each loop of i
         data = {}
 
-        for j in range(2):
-            m_infl = 1.0 + m_infl_range[i]
-            a_infl = 0.1 + a_infl_range[j]
+        # for j in range(2):
+        m_infl = 1.0 + m_infl_range[i]
+        a_infl = 0.0
 
-            key = 'd_17_aus_m_infl_' + str(m_infl).zfill(2) +'_a_infl_' + str(np.round(a_infl, decimals=2)).zfill(2)
-            data[key] = simulate_ekf_aus_jump(x_init, truth, 17, obs_dim, h, f, tanl, tl_fore_steps, Q, obs_un,
+        key = 'd_17_aus_m_infl_' + str(m_infl).zfill(2) +'_a_infl_' + str(np.round(a_infl, decimals=2)).zfill(2)
+        data[key] = simulate_ekf_aus_jump(x_init, truth, 17, obs_dim, h, f, tanl, tl_fore_steps, Q, obs_un,
                                                  seed, burn, m_inf=m_infl, a_inf=a_infl, clim=clim)
-            # keep track of how many completed
-            print(i + j)
+        # keep track of how many completed
+        # print(i + j)
 
         # on each loop of multiplicative inflation, we store the results
         f_name = './data/AUS_total_inflation_rmse_seed_' + str(seed).zfill(3) + '_analint_' + str(tanl).zfill(3) + \

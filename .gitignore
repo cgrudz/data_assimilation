@@ -1,7 +1,10 @@
 /EKF-AUSE/data
+/EKF-AUSE/ekf_ause_l96/data/
 /noisy_linear/D3_plots
 /noisy_linear/KF_obs_data
 /noisy_linear/old_scripzzz
+/noisy_linear/KF_AUSE_COV_EIGS_DATA
+/noisy_linear/KF_AUSE/forecast_eigs_data
 
 # Compiled source #
 ###################
@@ -46,3 +49,9 @@ Thumbs.db
 
 # no vim backups
 *~
+
+# no output files
+*.out
+
+# no pycharm stuff
+*.idea
